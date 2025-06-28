@@ -1,8 +1,10 @@
 {
-  "name": "subtext-matcher-spa",
-  "private": true,
+  "name": "vue-subtext-matcher",
   "version": "0.0.1",
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
