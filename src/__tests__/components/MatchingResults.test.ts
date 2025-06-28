@@ -29,17 +29,17 @@ describe('MatchingResults', () => {
   })
 
   it('should show no results state', () => {
-    const wrapper = createWrapper({ 
-      hasSearched: true, 
-      matches: [] 
+    const wrapper = createWrapper({
+      hasSearched: true,
+      matches: []
     })
     expect(wrapper.text()).toContain('No matches found')
   })
 
   it('should show results when matches found', () => {
-    const wrapper = createWrapper({ 
-      hasSearched: true, 
-      matches: [0, 5, 10] 
+    const wrapper = createWrapper({
+      hasSearched: true,
+      matches: [0, 5, 10]
     })
     expect(wrapper.text()).toContain('Matches Found (3)')
     expect(wrapper.text()).toContain('0')

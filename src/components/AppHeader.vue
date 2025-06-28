@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import Menubar from 'primevue/menubar'
 import Button from 'primevue/button'
@@ -55,7 +55,7 @@ const menuItems = [
       <template #header>
         <h2>How to Use</h2>
       </template>
-      
+
       <div class="help-content">
         <div class="help-section">
           <h3>Quick Guide</h3>

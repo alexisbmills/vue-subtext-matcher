@@ -177,7 +177,7 @@ export default tseslint.config(
       'node_modules/**',
       'coverage/**',
       '*.min.js',
-      'public/**',
+      'public/**'
     ]
   }
 )

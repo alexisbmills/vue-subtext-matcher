@@ -20,9 +20,9 @@ self.onmessage = (event: MessageEvent<MatchRequest>) => {
     const response: MatchResponse = { matches }
     self.postMessage(response)
   } catch (error) {
-    self.postMessage({ 
-      matches: [], 
-      error: error instanceof Error ? error.message : 'Unknown error' 
+    self.postMessage({
+      matches: [],
+      error: error instanceof Error ? error.message : 'Unknown error'
     })
   }
 }

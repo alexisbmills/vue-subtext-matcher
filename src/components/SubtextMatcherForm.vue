@@ -31,7 +31,9 @@ const { defineField, errors, validate, resetForm: resetVeeValidateForm, meta } =
   }
 })
 
+// eslint-disable-next-line vue/no-dupe-keys
 const [text, textAttrs] = defineField('text')
+// eslint-disable-next-line vue/no-dupe-keys
 const [subtext, subtextAttrs] = defineField('subtext')
 
 // Sync with parent
@@ -90,9 +92,9 @@ watch(() => props.text, (newValue) => {
     <template #title>
       <h2>Find Matches</h2>
     </template>
-    
+
     <template #content>
-      <form @submit.prevent="handleSubmit" class="matcher-form">
+      <form class="matcher-form" @submit.prevent="handleSubmit">
         <div class="form-field">
           <label for="text-input" class="field-label">
             Text <span class="required-indicator">*</span>
@@ -100,13 +102,13 @@ watch(() => props.text, (newValue) => {
           <Textarea
             id="text-input"
             :model-value="text"
-            @update:model-value="updateText"
             v-bind="textAttrs"
             placeholder="Enter your main text here..."
             rows="6"
             class="w-full"
             :class="{ 'p-invalid': showTextError }"
             aria-describedby="text-error"
+            @update:model-value="updateText"
           />
           <Message
             v-if="showTextError"
@@ -126,12 +128,12 @@ watch(() => props.text, (newValue) => {
           <InputText
             id="subtext-input"
             :model-value="subtext"
-            @update:model-value="updateSubtext"
             v-bind="subtextAttrs"
             placeholder="Enter text to search for..."
             class="w-full"
             :class="{ 'p-invalid': showSubtextError }"
             aria-describedby="subtext-error"
+            @update:model-value="updateSubtext"
           />
           <Message
             v-if="showSubtextError"
@@ -159,8 +161,8 @@ watch(() => props.text, (newValue) => {
             icon="pi pi-refresh"
             severity="secondary"
             outlined
-            @click="handleReset"
             :disabled="isLoading"
+            @click="handleReset"
           />
         </div>
       </form>

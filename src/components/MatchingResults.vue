@@ -24,7 +24,7 @@ const displayState = computed(() => {
     <template #title>
       <h2>Matching Results</h2>
     </template>
-    
+
     <template #content>
       <div class="results-container" aria-live="polite" aria-label="Search results">
         <!-- Loading State -->
@@ -37,14 +37,18 @@ const displayState = computed(() => {
         <div v-else-if="displayState === 'initial'" class="results-state initial-state">
           <i class="pi pi-search state-icon" />
           <p>Results will appear here.</p>
-          <p class="state-hint">Enter text and subtext, then click "Match" to find matches.</p>
+          <p class="state-hint">
+            Enter text and subtext, then click "Match" to find matches.
+          </p>
         </div>
 
         <!-- No Results State -->
         <div v-else-if="displayState === 'no-results'" class="results-state no-results-state">
           <i class="pi pi-info-circle state-icon" />
           <p>No matches found.</p>
-          <p class="state-hint">Try adjusting your search terms.</p>
+          <p class="state-hint">
+            Try adjusting your search terms.
+          </p>
         </div>
 
         <!-- Results Found State -->
@@ -155,17 +159,17 @@ const displayState = computed(() => {
 }
 
 @keyframes pulse-animation {
-  0% { 
-    transform: scale(0.95); 
-    opacity: 0.7; 
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
   }
-  70% { 
-    transform: scale(1.05); 
-    opacity: 1; 
+  70% {
+    transform: scale(1.05);
+    opacity: 1;
   }
-  100% { 
-    transform: scale(1); 
-    opacity: 1; 
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 

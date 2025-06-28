@@ -18,5 +18,6 @@ export interface RouteMetadata {
 }
 
 declare module 'vue-router' {
-  interface RouteMeta extends RouteMetadata {}
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+  interface RouteMeta extends RouteMetadata { }
 }

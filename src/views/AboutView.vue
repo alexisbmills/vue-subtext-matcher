@@ -29,8 +29,9 @@ const portfolioLinks = [
     <div class="hero-section">
       <h1>About Subtext Matcher</h1>
       <p class="hero-description">
-        A modern, accessible, and performant string matching application built with Vue 3, TypeScript, and PrimeVue. 
-        This tool helps you find case-insensitive substring matches and displays their starting positions within your text.
+        A modern, accessible, and performant string matching application built with Vue 3,
+        TypeScript, and PrimeVue. This tool helps you find case-insensitive substring
+        matches and displays their starting positions within your text.
       </p>
     </div>
 
@@ -63,7 +64,10 @@ const portfolioLinks = [
               <i class="pi pi-eye" />
             </div>
             <h3>Accessibility First</h3>
-            <p>Built with WCAG 2.1 AA compliance, screen reader support, and keyboard navigation.</p>
+            <p>
+              Built with WCAG 2.1 AA compliance, screen reader support,
+              and keyboard navigation.
+            </p>
           </template>
         </Card>
 
@@ -73,7 +77,10 @@ const portfolioLinks = [
               <i class="pi pi-cog" />
             </div>
             <h3>High Performance</h3>
-            <p>Web Worker implementation ensures UI remains responsive during complex operations.</p>
+            <p>
+              Web Worker implementation ensures UI remains responsive during
+              complex operations.
+            </p>
           </template>
         </Card>
       </div>
@@ -216,7 +223,7 @@ const portfolioLinks = [
   .hero-section h1 {
     font-size: 3rem;
   }
-  
+
   .hero-description {
     font-size: 1.25rem;
   }

@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import SubtextMatcherForm from '../components/SubtextMatcherForm.vue'
 import MatchingResults from '../components/MatchingResults.vue'
 import { useSubtextMatcher } from '../composables/useSubtextMatcher'
 
-const { 
-  text, 
-  subtext, 
-  matches, 
-  isLoading, 
-  hasSearched, 
-  findMatches, 
-  resetForm 
+const {
+  text,
+  subtext,
+  matches,
+  isLoading,
+  hasSearched,
+  findMatches,
+  resetForm
 } = useSubtextMatcher()
 </script>
 
@@ -27,13 +26,9 @@ const {
           @reset="resetForm"
         />
       </div>
-      
+
       <div class="results-section">
-        <MatchingResults
-          :matches="matches"
-          :is-loading="isLoading"
-          :has-searched="hasSearched"
-        />
+        <MatchingResults :matches="matches" :is-loading="isLoading" :has-searched="hasSearched" />
       </div>
     </div>
   </div>
@@ -60,11 +55,11 @@ const {
     flex-direction: row;
     gap: 3rem;
   }
-  
+
   .form-section {
     flex: 0 0 45%;
   }
-  
+
   .results-section {
     flex: 1;
   }
