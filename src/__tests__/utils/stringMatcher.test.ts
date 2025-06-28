@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { findSubtextMatches } from '../../utils/stringMatcher'
+import '@vitest/web-worker'
+
+// Mock the Worker globally or for specific tests
 
 describe('stringMatcher', () => {
   describe('findSubtextMatches', () => {
@@ -38,6 +41,13 @@ describe('stringMatcher', () => {
     it('should handle unicode characters', async () => {
       const result = await findSubtextMatches('Hello 🌍 World 🌍', '🌍')
       expect(result).toEqual([6, 15])
+    })
+
+    it('should offload large strings to a Webworker', async () => {
+      const worker = new Worker(new URL('../../workers/stringMatcherWorker.ts', import.meta.url))
+      const result = await findSubtextMatches('Hello'.repeat(300), 'el', worker)
+
+      expect(result).toHaveLength(300)
     })
   })
 })
