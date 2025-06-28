@@ -69,13 +69,13 @@ const handleReset = () => {
 }
 
 // Watch for changes and emit to parent
-const updateText = (value: string) => {
+const updateText = (value = '') => {
   text.value = value
   emit('update:text', value)
 }
 
-const updateSubtext = (value: string) => {
-  subtext.value = value
+const updateSubtext = (value = '') => {
+  subtext.value = value || ''
   emit('update:subtext', value)
 }
 
