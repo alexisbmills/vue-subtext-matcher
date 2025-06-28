@@ -1,6 +1,5 @@
 {
-  "name": "subtext-matcher-spa",
-  "private": true,
+  "name": "vue-subtext-matcher",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
