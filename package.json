@@ -1,0 +1,51 @@
+{
+  "name": "subtext-matcher-spa",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "lint:check": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@vee-validate/rules": "^4.11.8",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.44.0",
+    "vee-validate": "^4.11.8",
+    "vue": "^3.4.38",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@testing-library/vue": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@vitejs/plugin-vue": "^5.1.3",
+    "@vitest/coverage-v8": "^1.0.0",
+    "@vitest/eslint-plugin": "^1.3.3",
+    "@vue/eslint-config-typescript": "^14.1.3",
+    "@vue/test-utils": "^2.4.0",
+    "eslint": "^9.15.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "husky": "^9.1.6",
+    "jsdom": "^23.0.0",
+    "lint-staged": "^15.2.10",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^5.4.2",
+    "vitest": "^1.0.0",
+    "vue-eslint-parser": "^9.4.3",
+    "vue-tsc": "^2.1.4"
+  },
+  "lint-staged": {
+    "*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
+      "npm run lint:check"
+    ]
+  }
+}
