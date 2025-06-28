@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import MatchingResults from '../../components/MatchingResults.vue'
 import PrimeVue from 'primevue/config'
+import { highlightDirective } from '../../directives/highlight'
 
 const createWrapper = (props = {}) => {
   return mount(MatchingResults, {
@@ -12,7 +13,10 @@ const createWrapper = (props = {}) => {
       ...props
     },
     global: {
-      plugins: [PrimeVue]
+      plugins: [PrimeVue],
+      directives: {
+        highlight: highlightDirective
+      }
     }
   })
 }

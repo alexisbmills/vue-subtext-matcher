@@ -21,7 +21,9 @@ const menuItems = [
   {
     label: 'About',
     icon: 'pi pi-info-circle',
-    command: () => router.push('/about')
+    command: () => {
+      router.push('/about')
+    }
   }
 ]
 </script>
@@ -48,6 +50,7 @@ const menuItems = [
     <!-- Help Drawer -->
     <Sidebar
       v-model:visible="isHelpOpen"
+      data-test-id="help-drawer"
       position="right"
       class="help-drawer"
       @hide="closeHelp"
@@ -56,7 +59,7 @@ const menuItems = [
         <h2>How to Use</h2>
       </template>
 
-      <div class="help-content">
+      <div data-test-id="help-content" class="help-content">
         <div class="help-section">
           <h3>Quick Guide</h3>
           <ol>
