@@ -2,7 +2,7 @@
 
 A modern, accessible, and performant string matching application built with Vue 3, TypeScript, and PrimeVue.
 
-- **Live Demo:** [https://wonderful-hill-05781f610-1.centralus.2.azurestaticapps.net/](https://wonderful-hill-05781f610-1.centralus.2.azurestaticapps.net/)
+- **Live Demo:** [https://wonderful-hill-05781f610.2.azurestaticapps.net/](https://wonderful-hill-05781f610.2.azurestaticapps.net/)
 
 ## Features
 - Case-insensitive substring matching with starting position indices
