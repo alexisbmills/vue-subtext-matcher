@@ -12,7 +12,7 @@ A modern, accessible, and performant string matching application built with Vue 
 - Custom animated match highlighting
 - Clean, modular codebase with high test coverage
 
-![Subtext Matcher Screenshot](./docs/matcher.png)
+![Subtext Matcher Screenshot](./docs/matcher.PNG)
 
 ![Unit Test Coverage Report](./docs/coverage.PNG)
 
