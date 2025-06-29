@@ -36,12 +36,12 @@ const menuItems = [
       </template>
       <template #end>
         <Button
-          v-if="showHelpButton"
           icon="pi pi-question-circle"
           severity="secondary"
           text
           rounded
           aria-label="Open help"
+          :style="!showHelpButton ? 'visibility: hidden; pointer-events: none;' : ''"
           @click="toggleHelp"
         />
       </template>

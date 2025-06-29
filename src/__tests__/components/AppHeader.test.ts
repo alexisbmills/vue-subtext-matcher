@@ -62,17 +62,17 @@ describe('AppHeader', () => {
 
   it('shows help button when route.meta.showHelpButton is true', () => {
     const wrapper = createWrapper({ showHelpButton: true })
-    expect(wrapper.find('[aria-label="Open help"]').exists()).toBe(true)
+    expect(wrapper.find('[aria-label="Open help"]').isVisible()).toBe(true)
   })
 
   it('does not show help button when route.meta.showHelpButton is false', () => {
     const wrapper = createWrapper({ showHelpButton: false })
-    expect(wrapper.find('[aria-label="Open help"]').exists()).toBe(false)
+    expect(wrapper.find('[aria-label="Open help"]').isVisible()).toBe(false)
   })
 
   it('does not show help button when route.meta is undefined', () => {
     const wrapper = createWrapper(undefined)
-    expect(wrapper.find('[aria-label="Open help"]').exists()).toBe(false)
+    expect(wrapper.find('[aria-label="Open help"]').isVisible()).toBe(false)
   })
 
   it('opens help drawer when help button is clicked', async () => {
