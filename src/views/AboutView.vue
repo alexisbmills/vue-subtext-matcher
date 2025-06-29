@@ -1,24 +1,23 @@
 <script setup lang="ts">
 import Card from 'primevue/card'
-import Button from 'primevue/button'
 
 const portfolioLinks = [
   {
     title: 'GitHub Profile',
     description: 'View my open source projects and contributions',
-    url: 'https://github.com/example',
+    url: 'https://github.com/alexisbmills',
     icon: 'pi pi-github'
   },
   {
     title: 'Portfolio Website',
     description: 'Explore my professional work and case studies',
-    url: 'https://example.com',
+    url: 'https://turnstileweb.dev',
     icon: 'pi pi-globe'
   },
   {
     title: 'LinkedIn',
     description: 'Connect with me professionally',
-    url: 'https://linkedin.com/in/example',
+    url: 'https://www.linkedin.com/in/alexis-bradley-mills-5832422a',
     icon: 'pi pi-linkedin'
   }
 ]
@@ -99,16 +98,16 @@ const portfolioLinks = [
                 <h3>{{ link.title }}</h3>
                 <p>{{ link.description }}</p>
               </div>
-              <Button
+              <a
                 :href="link.url"
+                :to="link.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                icon="pi pi-external-link"
-                severity="secondary"
-                text
-                rounded
+                class="p-button p-component p-button-text"
                 :aria-label="`Visit ${link.title}`"
-              />
+              >
+                <i class="pi pi-external-link" />
+              </a>
             </div>
           </template>
         </Card>
